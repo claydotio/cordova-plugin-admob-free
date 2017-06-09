@@ -233,7 +233,7 @@ public class BannerExecutor extends AbstractExecutor {
                 }
 
                 if (callbackContext != null) {
-                    callbackContext.success();
+                    callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, adView.getHeight()));
                 }
             }
         });
