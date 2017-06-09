@@ -84,7 +84,7 @@ public class BannerExecutor extends AbstractExecutor {
 //                }
                 Log.w("banner", plugin.config.getBannerAdUnitId());
 
-                callbackContext.success();
+                callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, adView.getHeight()));
             }
         });
 
