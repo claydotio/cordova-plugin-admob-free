@@ -176,7 +176,7 @@ public class BannerExecutor extends AbstractExecutor {
                 CordovaInterface cordova = plugin.cordova;
                 if (bannerVisible == bannerShow) {
                     // no change
-                } else if (bannerShow) {
+                } else if (bannerShow && adView != null) {
                     CordovaWebView webView = plugin.webView;
                     if (adView.getParent() != null) {
                         ((ViewGroup) adView.getParent()).removeView(adView);
@@ -227,7 +227,7 @@ public class BannerExecutor extends AbstractExecutor {
                     adView.setVisibility(View.VISIBLE);
                     bannerVisible = true;
 
-                } else {
+                } else if (adView != null) {
                     adView.setVisibility(View.GONE);
                     bannerVisible = false;
                 }
