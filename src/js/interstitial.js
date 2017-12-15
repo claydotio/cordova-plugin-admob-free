@@ -1,4 +1,4 @@
-import {buildEvents, exec, translateOptions} from './utils'
+import { buildEvents, exec, translateOptions } from './utils'
 
 /**
  * Interstitial config object.
@@ -23,7 +23,7 @@ class Interstitial {
 
   /**
    * @protected
-   * @param {InterstitialConfig} opts - initial config.
+   * @param {InterstitialConfig} opts - Initial config.
    */
   constructor(opts) {
     this.config({
@@ -33,8 +33,9 @@ class Interstitial {
 
   /**
    * Update config.
-   * @param {InterstitialConfig} opts - new config.
-   * @return {InterstitialConfig} updated config.
+   *
+   * @param {InterstitialConfig} opts - New config.
+   * @returns {InterstitialConfig} Updated config.
    */
   config(opts) {
     this._config = {
@@ -45,7 +46,7 @@ class Interstitial {
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   prepare() {
     const options = {
@@ -57,18 +58,18 @@ class Interstitial {
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   show() {
     return exec('showInterstitialAd', [true])
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   isReady() {
     return exec('isInterstitialReady', [])
   }
 }
 
-export {Interstitial}
+export { Interstitial }
