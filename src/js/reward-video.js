@@ -1,4 +1,4 @@
-import {buildEvents, exec, translateOptions} from './utils'
+import { buildEvents, exec, translateOptions } from './utils'
 
 /**
  * Reward Video config object.
@@ -24,7 +24,7 @@ class RewardVideo {
 
   /**
    * @protected
-   * @param {RewardVideoConfig} opts - initial config.
+   * @param {RewardVideoConfig} opts - Initial config.
    */
   constructor(opts) {
     this.config({
@@ -34,8 +34,9 @@ class RewardVideo {
 
   /**
    * Update config.
-   * @param {RewardVideoConfig} opts - new config.
-   * @return {RewardVideoConfig} updated config.
+   *
+   * @param {RewardVideoConfig} opts - New config.
+   * @returns {RewardVideoConfig} Updated config.
    */
   config(opts) {
     this._config = {
@@ -46,7 +47,7 @@ class RewardVideo {
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   prepare() {
     const options = {
@@ -58,18 +59,18 @@ class RewardVideo {
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   show() {
     return exec('showRewardVideo', [true])
   }
 
   /**
-   * @return {Promise}
+   * @returns {Promise} Excutaion result promise.
    */
   isReady() {
     return exec('isRewardVideoReady', [])
   }
 }
 
-export {RewardVideo}
+export { RewardVideo }
